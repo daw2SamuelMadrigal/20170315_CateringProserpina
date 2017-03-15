@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <!-- Define la codificaci&oacute;n de caracteres -->
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <!-- Define el autor del documento -->
+        <meta name="author" content="Samuel Madrigal" />
+        <!-- Define el programa con el que se ha generado el documento -->
+        <meta name="generator" content="Notepad ++ v5.9.3" />
+        <!-- Define el copyright del documento -->
+        <meta name="copyright" content="Regiones" />
+        <!-- Define el comportamiento de los buscadores -->
+        <meta name="robots" content="index, follow" />
+        <!-- Define las palabras claves del contenido del documento -->
+        <meta name="keywords" content="HTML" />
+        <!-- Define una breve descripci&oacute;n del sitio -->
+        <meta name="description" content="Catering Proserpina" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+
+        <title>Catering Proserpina</title>
+
+        <h:outputStylesheet library="css" name="estilo.css"/>
+
+        <h:outputScript library="js" name="jquery-3.1.1.js"/>
+        <h:outputScript library="js" name="arriba.js"/>
+        <h:outputScript library="js" name="nuevoJs.js"/>
+    </h:head>
+    <h:body>
+
+        <ui:decorate template="/resources/plantilla/template.xhtml">
+
+            <ui:define name="body">
+
+                <section id="body">
+                    <div id="contenedor-slider" class="contenedor-slider">
+                        <div id="slider" class="slider">
+                            <section class="slider__section">
+                                <h:graphicImage alt="1" library="images" name="imagenesWeb/1.jpg" styleClass="slider__img"></h:graphicImage>    
+                            </section>
+                            <section class="slider__section">
+                                <h:graphicImage alt="2" library="images" name="imagenesWeb/2.jpg" styleClass="slider__img"></h:graphicImage>    
+                            </section>
+                            <section class="slider__section">
+                                <h:graphicImage alt="3" library="images" name="imagenesWeb/3.JPG" styleClass="slider__img"></h:graphicImage>    
+                            </section>
+                            <section class="slider__section">
+                                <h:graphicImage alt="4" library="images" name="imagenesWeb/4.JPG" styleClass="slider__img"></h:graphicImage>    
+                            </section>
+                        </div>
+                        <div id="btn-prev" class="btn-prev">&#60;</div>
+                        <div id="btn-next" class="btn-next">&#62;</div>
+                    </div>
+
+                    <!--Slider-->
+                    <h:outputScript library="js" name="slider.js"/>
+
+                    <div id="desc">
+                        <h1>Proserpina</h1>
+                        <p>
+                            Le invitamos a que nos visite en nuestro restaurante Proserpina y disfrute de nuestros platos.
+                            Ofrecemos Servicio de Catering tanto en centros de trabajo como en lugares donde se celebre un evento gestionando
+                            cocinas ubicadas en las propias instalaciones de nuestros clientes. Así mismo, ofrecemos un servicio 
+                            orientado a residencias de mayores, empresas e incluso a organizaciones.
+                        </p>
+                    </div>
+
+                    <div id="res">
+                        <h1>Reserve ahora</h1>
+                        <p>
+                            Venga y disfrute del restaurante.
+                        </p>
+                        <h:form>
+                            <div>
+                                <h:outputLabel for="nombre" value="#{msjs.nombre}"/><br/>
+                                <h:inputText id="nombre" value="" a:placeholder="#{msjs.nombreP}"/>
+                            </div>
+
+                            <div>
+                                <h:outputLabel for="email" value="#{msjs.email}"/><br/>
+                                <h:inputText id="email" value="" a:placeholder="#{msjs.emailP}"/>
+                            </div>
+
+                            <div>
+                                <h:outputLabel for="telefono" value="#{msjs.telefono}"/><br/>
+                                <h:inputText id="telefono" value="" a:placeholder="#{msjs.telefonoP}"/>
+                            </div>
+                            <div>
+                                <h:outputLabel for="fecha" value="#{msjs.fecha}"/><br/>
+                                <h:inputText id="fecha" value="" a:placeholder="#{msjs.fechaP}"/>
+                            </div>
+
+                            <div>
+                                <h:outputLabel for="hora" value="#{msjs.hora}"/><br/>
+                                <h:inputText id="hora" value="" a:placeholder="#{msjs.horaP}"/>
+                            </div>
+
+                            <div>
+                                <h:outputLabel for="personas" value="#{msjs.personas}"/><br/>
+                                <h:inputText id="personas" value="" a:placeholder="#{msjs.personasP}"/>
+                            </div>
+                            <input type="button" value="Enviar reserva"/>
+                        </h:form>
+                    </div>
+
+                    <div id="even">
+                        <h1>Eventos Proserpina</h1>
+                        <p>
+                            Somos especialistas en eventos.<br/>
+                            Planificamos el catering de su boda, cumpleaños, comunión, evento de empresa.
+                        </p>
+                        <input type="button" value="Contactar"/>
+                    </div>
+                </section>
+
+            </ui:define>
+
+        </ui:decorate>
+
+    </h:body>
+</html>
+

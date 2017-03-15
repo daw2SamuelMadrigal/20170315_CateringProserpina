@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <composite:interface>
+        <composite:attribute name="terms"/>
+        <composite:attribute name="navs"/>
+        <composite:attribute name="priv"/>
+        <composite:attribute name="twitter"/>
+        <composite:attribute name="facebook"/>
+        <composite:attribute name="youtube"/>
+        <composite:attribute name="instagram"/>
+        <composite:attribute name="copy"/>
+    </composite:interface>
+
+
+    <composite:implementation>
+
+        <div id="foot1">
+            <div class="footer-informacion">
+                <p>
+                    <a href="/JSP/comun/terms.jsp">#{cc.attrs.terms}</a>
+                    <a href="/JSP/comun/navs.jsp">#{cc.attrs.navs}</a>
+                    <a href="/JSP/comun/priv.jsp">#{cc.attrs.priv}</a>
+                </p>
+
+                <div id="hr"></div>
+
+                <div id="foot1-2">
+                    <p>
+                        <a class="if-image" href="#{cc.attrs.twitter}"><h:graphicImage  alt="twitter" library="images" name="imagenesWeb/Twitter-icon.png"/></a>
+                        <a class="if-image" href="#{cc.attrs.facebook}"><h:graphicImage  alt="facebook" library="images" name="imagenesWeb/social_facebook.png"/></a>
+                        <a class="if-image" href="#{cc.attrs.youtube}"><h:graphicImage  alt="youtube" library="images" name="imagenesWeb/youtube-128.png"/></a>
+                        <a class="if-image" href="#{cc.attrs.instagram}"><h:graphicImage  alt="instagram" library="images" name="imagenesWeb/instagram.ico"/></a>
+                        #{cc.attrs.copy}
+                    </p>
+                </div>
+            </div>           
+        </div>
+
+    </composite:implementation>
+
+</html>
+

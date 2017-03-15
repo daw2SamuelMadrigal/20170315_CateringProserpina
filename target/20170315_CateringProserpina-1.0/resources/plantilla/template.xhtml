@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:comp="http://xmlns.jcp.org/jsf/composite/componente">
+
+    <span class="ir-arriba icon-arrow-up2"></span>
+    <header>
+        <ui:insert name="header">
+            <center>
+                <div id="logo">
+                    <h:link outcome="index.xhtml"><h:graphicImage alt="logo" library="images" name="imagenesWeb/fin.jpg"></h:graphicImage></h:link>
+                </div>
+            </center>
+            <div id="nav">
+                <p style="text-align:right;margin-top:-25px;margin-bottom:1px;"><a href="#">Español </a> / <a href="#"> English</a></p>
+                <hr/>
+                <ul style="margin-top:25px;text-align:center;">
+                    <a href="#">INICIO</a>
+                    <a href="#">SOBRE NOSOTROS</a>
+                    <a href="#">RESTAURANTE</a>
+                    <a href="#">CATERING Y EVENTOS</a>
+                    <a href="#">CONTACTO</a>
+                </ul>
+            </div>
+        </ui:insert>
+    </header>
+
+    <div>    
+        <ui:insert name="body">
+            Cuerpo
+        </ui:insert>
+    </div> 
+
+    <footer>    
+        <ui:insert name="footer">
+            
+            <comp:footer
+                terms="Términos y condiciones" 
+                navs="Navegadores compatibles" 
+                priv="Declaración de privacidad" 
+                twitter="https://twitter.com"
+                facebook="https://es-es.facebook.com/"
+                youtube="https://www.youtube.com/?hl=es&#38;gl=ES"
+                instagram="https://www.instagram.com/" 
+                copy="Copyright &#169; 2017, Catering Proserpina. Todos los derechos reservados. Calle Morería, 6. Mérida, 06800 Badajoz ESPAÑA" />
+            
+        </ui:insert>
+    </footer>
+    <span class="ir-arriba icon-arrow-up2"></span>
+</html>
+
